@@ -1,6 +1,6 @@
 /*
- * grunt-version-map
- * https://github.com/Administrator/grunt-version-map
+ * grunt-versionmap
+ * https://github.com/Administrator/grunt-versionmap
  *
  * Copyright (c) 2019 dirkliu
  * Licensed under the MIT license.
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('version_map', 'The best Grunt plugin ever.', function() {
+  grunt.registerMultiTask('versionmap', 'The best Grunt plugin ever.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       encoding: 'utf8',
@@ -32,9 +32,10 @@ module.exports = function(grunt) {
     });
 
     // Iterate over all specified file groups.
-    var versionMap = {}
+    // var versionMap = {}
+    grunt.log.write('test ').ok('test ok');
     this.files.forEach(function(filePair) {
-      console.log('filePair:', filePair)
+      // console.log('filePair:', filePair)
       filePair.src.forEach(function(f) {
 
         var hash = md5(f, options.algorithm, 'hex', options.encoding),

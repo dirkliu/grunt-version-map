@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.version_map = {
+exports.versionmap = {
   setUp: function(done) {
     // setup here if necessary
     done();

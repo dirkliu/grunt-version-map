@@ -1,6 +1,6 @@
 /*
- * grunt-version-map
- * https://github.com/Administrator/grunt-version-map
+ * grunt-versionmap
+ * https://github.com/Administrator/grunt-versionmap
  *
  * Copyright (c) 2019 dirkliu
  * Licensed under the MIT license.
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    version_map: {
+    versionmap: {
       default_options: {
         options: {
         },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'version_map', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'versionmap', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
