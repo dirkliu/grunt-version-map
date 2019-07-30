@@ -1,5 +1,5 @@
 {
-  "name": "grunt-versionmap",
+  "name": "grunt-versionjson",
   "description": "The best Grunt plugin ever.",
   "version": "0.1.1",
   "homepage": "https://github.com/dirkliu/grunt-versionmap",
