@@ -1,4 +1,4 @@
-# grunt-version-map
+# grunt-versionmap
 输出文件的md5版本号
 
 > The best Grunt plugin ever.
