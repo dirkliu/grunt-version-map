@@ -23,7 +23,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('versionjson', 'The best Grunt plugin ever.', function() {
+  grunt.registerMultiTask('versionjson', 'output file version json.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       encoding: 'utf8',
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     });
 
     fs.writeFileSync('./version.json', JSON.stringify(versionMap,"","\t"), function(err){
-      if (err) {res.status(500).send('Server is error...')}
+      if (err) {res.status(500).send('file write fail...')}
     })
   });
 

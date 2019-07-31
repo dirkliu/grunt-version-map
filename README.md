@@ -29,8 +29,9 @@ grunt.initConfig({
     options: {
       // Task-specific options go here.
     },
-    your_target: {
+    files: {
       // Target-specific file lists and/or options go here.
+      src:["a/b/c**"]
     },
   },
 });
@@ -60,7 +61,7 @@ grunt.initConfig({
   versionjson: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'src': ['src/testing', 'src/123'],
     },
   },
 });
@@ -77,7 +78,7 @@ grunt.initConfig({
       punctuation: ' !!!',
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'src': ['src/testing', 'src/123'],
     },
   },
 });
