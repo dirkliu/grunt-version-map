@@ -1,6 +1,6 @@
 /*
- * grunt-versionmap
- * https://github.com/Administrator/grunt-versionmap
+ * grunt-versionjson
+ * https://github.com/Administrator/grunt-versionjson
  *
  * Copyright (c) 2019 dirkliu
  * Licensed under the MIT license.
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('versionmap', 'The best Grunt plugin ever.', function() {
+  grunt.registerMultiTask('versionjson', 'The best Grunt plugin ever.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       encoding: 'utf8',
