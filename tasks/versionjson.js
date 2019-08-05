@@ -28,6 +28,7 @@ module.exports = function(grunt) {
     var options = this.options({
       encoding: 'utf8',
       algorithm: 'md5',
+      fileType: 'json'
       // length: 8
     });
 
@@ -48,7 +49,21 @@ module.exports = function(grunt) {
       });
     });
 
-    fs.writeFileSync('./version.json', JSON.stringify(versionMap,"","\t"), function(err){
+    var fileContent = ''
+
+    switch (options.fileType) {
+      case 'json':
+        fileContent = JSON.stringify(versionMap,"","\t")
+        break;
+      case 'js':
+        fileContent = 'export default ' + JSON.stringify(versionMap,"","\t")
+        break;
+      case 'php':
+        fileContent = '<?php \n' + '$versionjson = json_decode(\'' + JSON.stringify(versionMap) + '\', true); \n return $versionjson;'
+        break;
+    }
+
+    fs.writeFileSync('./version.' + options.fileType, fileContent, function(err){
       if (err) {res.status(500).send('file write fail...')}
     })
   });
